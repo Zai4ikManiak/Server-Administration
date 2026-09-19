@@ -47,16 +47,54 @@ ssh #USER@#REMOTE_SERVER ;
 ***
 ### [Backup Server] rrsync
 
+A general restricted wrapper around rsync, mainly used for SSH access where you don't want the remote user to get a general shell.
+This is handy cause we leave the shell for #USER as /bin/bash, and we will have to restrict it further.
+
+1. Download it.
+2. Upload it to */usr/local/bin/rrsync*, if it was not installed there.
+    - This will enable the package use for any user.
 
 ***
 ### [Backup Server] Lock the access.
 
-1. If the connection through ssh key is working you can lock the password for the user.
+1. If the connection through ssh key is working you can lock the password for #USER.
 
 ```
 passwd -l #USER
 ```
 
-2. asd
+2. Add the below text at the begining of /path/to/home/dir.ssh/authorized_keys.
+
+```
+from="SOURCE_IP_ADDRESS",restrict,command="/usr/local/bin/rrsync /path/to/home/dir" 
+```
 
 ***
+
+### [Source Server] Test rync.
+
+1. Check if ssh connection through to the server.
+
+```
+ssh #USER@#REMOTE_SERVER
+
+#It should return:
+PTY allocation request failed on channel 0
+/usr/local/bin/rrsync: Not invoked via sshd
+Use 'command="/usr/local/bin/rrsync [-ro|-wo] SUBDIR"'
+	in front of lines in /cloud/backup/fabrikhome//.ssh/authorized_keys
+Connection to 10.10.10.201 closed.
+
+ssh -T #USER@#REMOTE_SERVER 'echo HELLO'
+ssh fabrikhome@10.10.10.201 'id'
+ssh fabrikhome@10.10.10.201 'touch /tmp/test.txt'
+
+# Any command should return:
+/usr/local/bin/rrsync: SSH_ORIGINAL_COMMAND='echo HELLO' is not rsync
+```
+
+2. Test rsync connection to backup server.
+
+```
+rsync -av --dry-run /root fabrikhome@10.10.10.201:/etc/
+```
