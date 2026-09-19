@@ -31,7 +31,8 @@ The source server connects to the backup server using SSH.
 
 The SSH public key is restricted so that the backup account can only execute `rrsync`. Direct shell access and arbitrary command execution are therefore prevented.
 
-> **Note:** This configuration does **not** use `rsyncd` or an rsync daemon. The rsync process on the backup server is started by SSH when the source server connects.
+> [!NOTE]
+> This configuration does **not** use `rsyncd` or an rsync daemon. The rsync process on the backup server is started by SSH when the source server connects.
 
 ***
 
