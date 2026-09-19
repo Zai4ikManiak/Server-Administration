@@ -32,6 +32,7 @@ chown -R #USER:#USER /path/to/home/dir ;
     fake super = yes
 ```
 
+***
 ### [Source Server] SSH key and connection.
 
 1. *Generate*, *upload*, and *test* the ssh key to remote server.
@@ -43,10 +44,11 @@ ssh-copy-id #USER@#REMOTE_SERVER ;
 ssh #USER@#REMOTE_SERVER ;
 ```
 
+***
 ### [Backup Server] rrsync
 
 
-
+***
 ### [Backup Server] Lock the access.
 
 1. If the connection through ssh key is working you can lock the password for the user.
@@ -55,4 +57,6 @@ ssh #USER@#REMOTE_SERVER ;
 passwd -l #USER
 ```
 
-2. 
+2. asd
+
+***
