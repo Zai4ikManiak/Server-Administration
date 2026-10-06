@@ -18,11 +18,11 @@ config:
         showIcons: false
 ---
 treeView-beta
-    family ## Abstractisation of multiple networking levels.
-        tables ## Top-level containers within nftables ruleset.
-            chains
-            sets
-            maps
-            flowtables
-            stateful onjects
+family ## Abstractisation of multiple networking levels.
+    tables ## Top-level containers within nftables ruleset.
+        chains
+        sets
+        maps
+        flowtables
+        stateful onjects
 ```
