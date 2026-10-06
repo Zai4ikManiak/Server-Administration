@@ -4,7 +4,7 @@
 
 It is composed of the following elements:
 - [**families**](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Families.md) </br>Abstractisation of multiple networking levels.</br></br>Note that what traffic/packets are seen and at which point in the network stack dependson the [hook](https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks) that is being used.
-    - **tables**: Top-level containers, that must belong to exactly one family.
+    - **tables**: </br>Top-level containers, that must belong to exactly one family.
         - **chains**
         - **sets**
         - **maps**
