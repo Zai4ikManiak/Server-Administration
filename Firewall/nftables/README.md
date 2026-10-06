@@ -4,26 +4,10 @@
 
 It is composed of the following elements:
 - **family**
+Abstractisation of multiple networking levels.
     - **tables**
         - **chains**
         - **sets**
         - **maps**
         - **flowtables**
         - **stateful objects**
-
-```mermaid
----
-config:
-    treeView:
-        showIcons: false
----
-treeView-beta
-
-family ## Abstractisation of multiple networking levels.
-    tables ## Top-level containers within nftables ruleset.
-        chains
-        sets
-        maps
-        flowtables
-        stateful onjects
-```
