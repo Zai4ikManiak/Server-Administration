@@ -9,7 +9,7 @@
 | `[original \| reply] bytes <value>` | `ct original bytes > 100000`</br>`ct bytes > 100000` |
 | `[original \| reply] packets <value>` | `ct reply packets < 100` |
 | `[original \| reply] ip saddr <ip source address>` | `ct original ip saddr 192.168.0.1`</br>`ct reply ip saddr 192.168.0.1`</br>`ct original ip saddr 192.168.1.0/24`</br>`ct reply ip saddr 192.168.1.0/24` |
-| `[original | reply] ip daddr <ip destination address>` | `ct original ip daddr 192.168.0.1`</br>`ct reply ip daddr 192.168.0.1`</br>`ct original ip daddr 192.168.1.0/24`</br>`ct reply ip daddr 192.168.1.0/24` |
+| `[original \| reply] ip daddr <ip destination address>` | `ct original ip daddr 192.168.0.1`</br>`ct reply ip daddr 192.168.0.1`</br>`ct original ip daddr 192.168.1.0/24`</br>`ct reply ip daddr 192.168.1.0/24` |
 | `[original \| reply] l3proto <protocol>` | `ct original l3proto ipv4` |
 | `[original \| reply] protocol <protocol>` | `ct original protocol 6` |
 | `[original \| reply] proto-dst <port>` | `ct original proto-dst 22` |
