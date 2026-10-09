@@ -177,8 +177,8 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [ICMPv6](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ICMPv6.md)
 - [ETHER](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ETHER.md)
 - [DST](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20DST.md)
-- Frag
-- Hbh
+- [FRAG](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20FRAG.md)
+- [HBH]()
 - Mh
 - Rt
 - VLAN
