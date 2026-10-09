@@ -151,3 +151,5 @@ Each rule consists of zero or more expressions followed by one or more statement
 Each Expression teste whether a packet mathces a specific payload field or packet/flow metadata. Multiple expressions are linearly evaluated from left to right: if the first expression matches, then the next expression is evaluated and so on. If we reach the final expression, then the packet matches all of the expressions in the rule, and the rule's statements are executed.
 
 Each statement takes an action, such as setting the netfilter mark, counting the packet, logging the packet, or rendering a verdict such as accepting or dropping the packet or jumping to another chain. As with expressions, multiple statements are linearly evaluated from left to right: a single rule can take multiple actions by using multiple statements. A verdict statement by its nature ends the rule.
+
+## Syntax:
