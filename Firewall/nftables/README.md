@@ -73,7 +73,7 @@ Base chains are directly attached to Netfilter hooks, allowing them to process p
 Command line syntax
 
 ```bash
-nft (add | create) chain [<family>] <table> <name> [ \{ type <type> hook <hook> [device <device>] priority <priority> \; [policy <policy> \;] \} ]
+nft (add | create) chain [<family>] <table> <name> [ '{ type <type> hook <hook> [device <device>] priority <priority> \; [policy <policy> \;] }' ]
 nft (delete | list | flush) chain [<family>] <table> <name>
-nft rename chain [<family>] <table> <name> <newname>
+nft rename chain [<family>] <table> <name> <newname>'
 ```
