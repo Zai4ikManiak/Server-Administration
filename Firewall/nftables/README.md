@@ -168,8 +168,8 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [TCP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20TCP.md)
 - [UDP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20UDP.md)
 - [UDP-Lite](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20UDP-Lite.md)
-- Sctp
-- Dccp
+- [SCTP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20SCTP.md)
+- [DCCP]()
 - Ah
 - Esp
 - Comp
