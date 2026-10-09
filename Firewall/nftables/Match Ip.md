@@ -1,5 +1,5 @@
-| Match Syntax | Examples | Description |
-| :---: | :---: | :--- |
+| Match Syntax | Examples |
+| :---: | :--- |
 | `dscp <value>` | `ip dscp cs1`</br>`ip dscp != cs1`</br>`ip dcsp 0x38`</br>`ip dscp != 0x20`</br>`ip dscp { cs0, cs1, cs2, cs3, cs4, cs5, cs6, cs7, af11, af12, af13, af21, af22, af31, af32, af33, af41, af42, af43, ef }` |
 | `length <length>` | `ip length 232`</br>`ip length != 233`</br>`ip length 333-435`</br>`ip length != 333-455`</br>`ip length { 333, 553, 673, 838}` |
 | `id <id>` | `ip id 22`</br>`if ip != 233`</br>`ip id 33-45`</br>`ip id != 33-45`</br>`ip id { 33, 55, 67, 88}` |
