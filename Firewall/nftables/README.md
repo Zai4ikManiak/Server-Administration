@@ -11,14 +11,14 @@ It is composed of the following elements:
         - **flowtables**
         - **stateful objects**
 
-## Families
+# Families
 
 Abstractisation of multiple networking levels.
 
 >[!NOTE]
 > What traffic/packets are seen and at which point in the network stack dependson the [hook](https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks) that is being used.
 
-### Current nftables families:
+## Current nftables families:
 
 | Family | Description | Equivalent tool |
 | :---: | :--- | :--- |
@@ -34,13 +34,13 @@ there is no `nf_conntrack` integration for the nftables bridge family. | `ebtabl
 nterface**, with no assumptions about L2 or L3 protocols. Therefore ARP traffic can be filtered from here.</br></br>The principal use for this family is fo
 r base chains using the [ingress hook](https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks). | |
 
-## Tables
+# Tables
 
 Tables are the top-level containers within an nftables ruleset   
 
 Each table belongs to exactly one family. So your ruleset requires at least one table for each family you want to filter. 
  
-### Syntax:
+## Syntax:
 
 ```bash
 nft list tables [<family>]
@@ -51,9 +51,26 @@ nft (add | delete | flush) table [<family>] <name>
 # [-a] -> used to display each rule's handle (i.e., a numeric identifier).
 ```
 
-## Chains
-    
-### Syntax
+# Chains
+
+As in {ip, ip6}\_tables, chains are containers that store the rules.
+
+There are 2 types of chains:
+- **Basic chains**:
+Base chains are directly attached to Netfilter hooks, allowing them to process packets as they flow through the network stack.</br>
+**Characteristics**:</br>
+    - <ins>Processing</ins>: They evaluate packets directly and can accept or drop them based on defined rules.
+    - <ins>Hooks</ins>: Must be linked to specific hooks such as input, output, or forward.
+    - <ins>Priority</ins>: Each base chain has a priority that determines the order of processing among multiple chains at the same hook.
+- **Regular chains**:
+</br>Regular chains are not attached to any Netfilter hooks and do not process packets directly. Instead, they are called from base chains.</br>
+**Characteristics**:</br>
+    - <ins>Usage</ins>: Primarily used for organizing rules and can be invoked using jump or goto commands from base chains.
+    - <ins>No Direct Processing</ins>: They do not see packets unless called by a base chain.
+
+## Syntax
+
+Command line syntax
 
 ```bash
 nft (add | create) chain [<family>] <table> <name> [ \{ type <type> hook <hook> [device <device>] priority <priority> \; [policy <policy> \;] \} ]
