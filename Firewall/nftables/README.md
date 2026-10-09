@@ -90,7 +90,7 @@ add chain [<family>] <table_name> <chain_name> { type <type> hook <hook> [device
 ### Base Chain Types
 
 | Chain Types | Description | Supported Families | 
-| :---: | :--- |
+| :---: | :--- | :--- |
 | `filter` | Used to filter packets. | `ip`</br>`ip6`</br>`inet` |
 | `route` | Used to reroute packets if any relevant IP header field or the packet mark is modified.</br></br>If you are familiar with *iptables*, this chain type provides equivalent semantics to the *mangle* table but only for *output* hook (for other hooks use type *filter* instead).| `ip`</br>`ip6`</br>`inet` |
 | `nat` | Used to perform Networking Address Translation (NAT).</br></br>Only the first packet of a given flow hits this chain; subsequent packets bypass it.</br>Therefore, never use this chain for filtering. | `ip`</br>`ip6`</br>`inet` |
@@ -153,3 +153,15 @@ Each Expression teste whether a packet mathces a specific payload field or packe
 Each statement takes an action, such as setting the netfilter mark, counting the packet, logging the packet, or rendering a verdict such as accepting or dropping the packet or jumping to another chain. As with expressions, multiple statements are linearly evaluated from left to right: a single rule can take multiple actions by using multiple statements. A verdict statement by its nature ends the rule.
 
 ## Syntax:
+
+> [!IMPORTANT]
+> **handle** is an internal number that identifies a certain rule.
+> 
+> Inserted rules are placed at the beginning of the chain, by default. However, if you specify a position handle, then the new rule is inserted just before the existing rule with that handle.
+
+```bash
+nft add rule [<family>] <table> <chain> <matches> <statements>
+nft insert rule [<family>] <table> <chain> [position <handle>] <matches> <statements>
+nft replace rule [<family>] <table> <chain> [handle <handle>] <matches> <statements>
+nft delete rule [<family>] <table> <chain> [handle <handle>]
+```
