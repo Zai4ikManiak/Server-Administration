@@ -166,7 +166,7 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [IP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20IP.md)
 - [IP6](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20IP6.md)
 - [TCP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20TCP.md)
-- UDP
+- [UDP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20UDP.md)
 - UDPlite
 - Sctp
 - Dccp
