@@ -77,7 +77,7 @@ Command line syntax
 
 ```bash
 # Shell mode
-nft (add | create) chain [<family>] <table> <name> [ '{ type <type> hook <hook> [device <device>] priority <priority> \; [policy <policy> \;] }' ]
+nft (add | create) chain [<family>] <table> <name> [ '{ type <type> hook <hook> [device <device>] priority <priority> \; [policy <policy> \;] }' ] [comment <comment>]
 nft (delete | list | flush) chain [<family>] <table> <name>
 nft rename chain [<family>] <table> <name> <newname>'
 
@@ -114,3 +114,40 @@ Each nftables base chain is assigned a [priority](https://wiki.nftables.org/wiki
 > If a packet is accepted and there is another chain, bearing the same hook type and with a later priority, then the packet will subsequently traverse this other chain. Hence, an accept verdict - be it by way of a rule or the default chain policy - isn't necessarily final. However, the same is not true of packets that are subjected to a drop verdict. Instead, drops take immediate effect, with no further rules or chains being evaluated.
 
 ### Base Chain Policy
+
+This is the default verdict that will be applied to packets reaching the end of the chain (i.e., no more rule to be evaluated against).
+
+Currently there are 2 policies:
+- **accept** verdict:</br>the packets will keep traversing the network stack (default).</br>
+- **drop** verdict:</br>the packet is discarded if the packet reaches the end of the base chain.
+
+> [!NOTE]
+> If no policy is explicitly selected, the default policy **accept** will be used.
+
+### Regular Chains
+
+Regular Chains can be added using the below syntax:
+
+```bash
+nft add chain [family] <table_name> <chain_name> [comment <comment>]
+```
+
+The chain name is an arbitrary string, with arbitrary case.
+
+> [!NOTE]
+> No hook keyword is included when adding a regular chain. Because it is not attached to a Netfilter hook, by itself a regular chain does not see any traffic.
+> 
+> But one or more base chains can include rules that jump or goto this chain - following which, the regular chain processes packets in exctly the same way as the calling base chain.
+
+There are several mechanism that allow moving between chains in Verdict Maps.
+
+---
+# Rules
+
+Rules take action on network packets based on whether they match specified criteria.
+
+Each rule consists of zero or more expressions followed by one or more statements.
+
+Each Expression teste whether a packet mathces a specific payload field or packet/flow metadata. Multiple expressions are linearly evaluated from left to right: if the first expression matches, then the next expression is evaluated and so on. If we reach the final expression, then the packet matches all of the expressions in the rule, and the rule's statements are executed.
+
+Each statement takes an action, such as setting the netfilter mark, counting the packet, logging the packet, or rendering a verdict such as accepting or dropping the packet or jumping to another chain. As with expressions, multiple statements are linearly evaluated from left to right: a single rule can take multiple actions by using multiple statements. A verdict statement by its nature ends the rule.
