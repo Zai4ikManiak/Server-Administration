@@ -174,8 +174,8 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [ESP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ESP.md)
 - [COMP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20COMP.md)
 - [ICMP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ICMP.md)
-- [ICMPv6]()
-- Ether
+- [ICMPv6](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ICMPv6.md)
+- [Ether]()
 - Dst
 - Frag
 - Hbh
