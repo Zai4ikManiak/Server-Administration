@@ -165,3 +165,40 @@ nft insert rule [<family>] <table> <chain> [position <handle>] <matches> <statem
 nft replace rule [<family>] <table> <chain> [handle <handle>] <matches> <statements>
 nft delete rule [<family>] <table> <chain> [handle <handle>]
 ```
+
+## Matches:
+
+- Ip
+- IP6
+- TCP
+- UDP
+- UDPlite
+- Sctp
+- Dccp
+- Ah
+- Esp
+- Comp
+- ICMP
+- ICMPv6
+- Ether
+- Dst
+- Frag
+- Hbh
+- Mh
+- Rt
+- VLAN
+- ARP
+- CT
+- Meat
+
+## Statements:
+
+- Verdict statements
+- Log
+- Reject
+- Counter
+- Limit
+- NAT
+- Queue
+
+---
