@@ -183,8 +183,8 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [RT](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20RT.md)
 - [VLAN](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20VLAN.md)
 - [ARP](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20ARP.md)
-- [CT]()
-- Meat
+- [CT](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Match%20CT.md)
+- [Meat]
 
 ## Statements:
 
