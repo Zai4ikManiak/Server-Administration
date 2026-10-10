@@ -14,4 +14,4 @@
 | `[original \| reply] protocol <protocol>` | `ct original protocol 6` |
 | `[original \| reply] proto-dst <port>` | `ct original proto-dst 22` |
 | `[original \| reply] proto-src <port>` | `ct reply proto-src 53` |
-| `count [over] <number of connections>` | `ct count over 2`</br>`tcp dport 22 add @ssh_flood { ip saddr ct count over 2 } reject`</br>`[ which requires an existing ssh_flood set, ie. add set filter ssh_flood { type ipv4_addr; flags dynamic; } ]` |
+| `count [over] <number of connections>` | `ct count over 2`</br></br>EX: `tcp dport 22 add @ssh_flood { ip saddr ct count over 2 } reject`</br>`[ which requires an existing ssh_flood set, ie. add set filter ssh_flood { type ipv4_addr; flags dynamic; } ]` |
