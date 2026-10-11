@@ -1,7 +1,7 @@
 The following rule shows how to reject any traffic from the network:
 
 ```bash
-nft add rule filter input reject
+with <protocol> type <type>
 ```
 
 ---
