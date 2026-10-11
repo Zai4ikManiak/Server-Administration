@@ -188,7 +188,9 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 
 ## Statements:
 
-- Verdict statements
+**Statements** is the aciton performed when the packet match the rule. It could be *terminal* and *non-terminal*. In a certain rule we can consider several non-terminal statements but only a single terminal statement.
+
+- [Verdict Statements]()
 - Log
 - Reject
 - Counter
