@@ -193,9 +193,9 @@ nft delete rule [<family>] <table> <chain> [handle <handle>]
 - [Verdict Statements](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Statements/Verdict%20Statements.md)
 - [Log](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Statements/Log%20Statements.md)
 - [Reject](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Statements/Reject%20Statements.md)
-- Counter
-- Limit
-- NAT
+- [Counter](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Statements/Counter%20Statements.md)
+- [Limit](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Firewall/nftables/Statements/Limit%20Statements.md)
+- [NAT]()
 - Queue
 
 ---
