@@ -1,7 +1,7 @@
 The following rule shows how to reject any traffic from the network:
 
 ```bash
-with <protocol> type <type>
+reject with <protocol> type <type>
 ```
 
 ---
