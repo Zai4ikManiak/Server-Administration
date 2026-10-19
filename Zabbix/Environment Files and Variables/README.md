@@ -8,3 +8,5 @@ Variables provided in the Zabbix official documentaion and their values.
 
 - ***Zabbix Server Variables***
     - [DB TLS.env Variables](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Zabbix/Environment%20Files%20and%20Variables/z_s_dbtls.md)
+    - [Vault.env Variables](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Zabbix/Environment%20Files%20and%20Variables/z_s_vault.md)
+    - [Hisotry.env Variables](https://github.com/Zai4ikManiak/Server-Administration/blob/main/Zabbix/Environment%20Files%20and%20Variables/z_s_history.md)
