@@ -2,7 +2,7 @@
 
 Environment files' variables with explanation.
 
-Variables provided in the actual Zabbix documentaion that none are used in production.
+Variables provided in the Zabbix official documentaion and their values.
 
 # List of .env files
 
