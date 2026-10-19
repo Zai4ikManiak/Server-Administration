@@ -2,7 +2,7 @@
 
 | Variable | Options | Description |
 | :---: | :---: | :--- |
-| `ZBX_HISTORYPROVIDER_<0-N>=` | `(default none) \| 'elasticsearch;value_types="str,log,text,json",url=http://elasticsearch:9200'` | Specify the history storage method for the Zabbix server, determining how historical data is managed and retrieved. |
+| `ZBX_HISTORYPROVIDER_<0-N>=` | `(default none) \| <storage method>` | Specify the history storage method for the Zabbix server, determining how historical data is managed and retrieved. |
 | `ZBX_HISTORYPROVIDER_<0-N>_USERNAME=` | `(default none) \| <username>` | Specify the username for connecting to a history provider in a Zabbix container setup. |
 | `ZBX_HISTORYPROVIDER_<0-N>_USERNAME_FILE=` | `(default none) \| path/to/file` | Specify a file that contains the username for connecting to the history provider in Zabbix.
 | `ZBX_HISTORYPROVIDER_<0-N>_PASSWORD=` | `(default none) \| <password>` | Specify the username for connecting to a history provider in a Zabbix container setup. |
