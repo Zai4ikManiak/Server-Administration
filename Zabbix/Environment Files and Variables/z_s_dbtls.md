@@ -9,6 +9,7 @@
 | `ZBX_DBTLSCIPHER=` | `(default none) \| list-of-ciphers` | The list of encryption ciphers that Zabbix server permits for TLS protocols up through TLS v1.2.</br></br>Supported only for MySQL. |
 | `ZBX_DBTLSCIPHER13=` | `(default none) \| list-of-ciphers` | The list of encryption ciphersuites that Zabbix server permits for the TLS v1.3 protocol.</br></br>Supported only for MySQL, starting from version 8.0.16. |
 
+---
 # Example of default .env file
 
 ```env
